@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        h1 {
+            font-size: 34px;
+            text-align: center;
+            font-weight: bold;
+            color: #000;
+        }
+        
+        p {
+            text-align: center;
+            color: #0e0101;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .restaurant-feedback-form {
+            margin: 0 auto;
+            width: 500px;
+        }
+    </style>
+    <title>Admin Page</title>
+</head>
+<body>
+
+<h1>Admin Page</h1>
+
+<table>
+    <tr>
+        <th>Item</th>
+        <th>Qty</th>
+    </tr>
+    {% for orderlist in order_list %}
+    <tr>
+        <td>{{ orderlist['Item'] }}</td>
+        <td>{{ orderlist['Qty'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
